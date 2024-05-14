@@ -13,6 +13,12 @@
     // Create arguments [Rock>Scissors, Paper > Rock, Scissors > Paper]
         //Whoever has the greater output wins
 
-    function getComputerChoice () {
-        let choices = ['rock', 'paper', 'scissors']
-        return choices[Math.floor(Math.random()*choices.length)];}
+function getComputerChoice () {
+    let choices = ['rock', 'paper', 'scissors']
+    return choices[Math.floor(Math.random()*choices.length)];
+}
+
+function getHumanChoice() {
+    let input = prompt("Enter Rock, Paper, or Scissors").toLowerCase().trim();
+    return input;
+}
