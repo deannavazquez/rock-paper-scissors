@@ -66,3 +66,5 @@ function playGame() {
         } else if (i === 4 && humanScore===computerScore) {alert ("It's a tie!")}
      }
     }
+
+    playGame();
