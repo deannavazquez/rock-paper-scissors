@@ -48,3 +48,21 @@ function playRound(humanChoice, computerChoice) {
     } else { 
         console.log ("Tie. Your score: " + humanScore + " Computer Score: " + computerScore);}
 }
+
+function playGame() {
+   for (let i = 0; i < 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+
+    playRound(humanSelection, computerSelection);
+    
+
+
+    if (i === 4 && humanScore>computerScore) {
+            alert ("You win the game!")
+        } else if (i === 4 && humanScore<computerScore) {
+        alert ("You lose! Computer wins the game!")
+        } else if (i === 4 && humanScore===computerScore) {alert ("It's a tie!")}
+     }
+    }
