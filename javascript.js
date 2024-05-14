@@ -68,13 +68,16 @@ function playGame() {
     
 
 
-    if (i === 4 && humanScore>computerScore) {
-            alert ("You win the game!")
-        } else if (i === 4 && humanScore<computerScore) {
-        alert ("You lose! Computer wins the game!")
-        } else if (i === 4 && humanScore===computerScore) {alert ("It's a tie!")}
+    if (i === 4) {
+        if (humanScore > computerScore) {
+            alert ("You win the game!");
+        } else if (humanScore < computerScore) {
+        alert ("You lose! Computer wins the game!");
+        } else {
+            alert ("It's a tie!");
+        }
      }
     }
-
+}
 
     playGame();
