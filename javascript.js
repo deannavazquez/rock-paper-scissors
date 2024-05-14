@@ -22,3 +22,6 @@ function getHumanChoice() {
     let input = prompt("Enter Rock, Paper, or Scissors").toLowerCase().trim();
     return input;
 }
+
+let humanScore = 0;
+let computerScore = 0;
