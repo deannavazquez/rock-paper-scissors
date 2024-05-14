@@ -20,7 +20,16 @@ function getComputerChoice () {
 
 function getHumanChoice() {
     let input = prompt("Enter Rock, Paper, or Scissors").toLowerCase().trim();
-    return input;
+    if (!input) {
+        alert("Invalid choice, please try again.");
+        return getHumanChoice(); // Ask again for valid input
+    }
+    if (['rock', 'paper', 'scissors'].includes(input)) {
+        return input;
+    } else {
+        alert("Invalid choice, please try again.");
+        return getHumanChoice(); // Ask again for valid input
+    }
 }
 
 let humanScore = 0;
@@ -66,5 +75,6 @@ function playGame() {
         } else if (i === 4 && humanScore===computerScore) {alert ("It's a tie!")}
      }
     }
+
 
     playGame();
