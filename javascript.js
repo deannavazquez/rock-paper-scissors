@@ -92,7 +92,7 @@ function playGame() {
         if (humanScore > computerScore) {
             alert ("You win the game!");
         } else if (humanScore < computerScore) {
-        alert ("You lose! Computer wins the game!");
+            alert ("You lose! Computer wins the game!");
         } else {
             alert ("It's a tie!");
         }
