@@ -40,37 +40,37 @@ function playRound(humanChoice, computerChoice) {
         ++humanScore;
         console.log ("Computer chose " + computerChoice);
         console.log ("You win! Rock beats scissors!");
-        console.log (" Your score: " + 
+        console.log ("Your score: " + 
         humanScore + " Computer Score: " + computerScore );
     } else if  (humanChoice === 'paper' && computerChoice === 'rock') {
         ++humanScore;
         console.log ("Computer chose " + computerChoice);
         console.log ("You win! Paper beats rock!");
-        console.log (" Your score: " + 
+        console.log ("Your score: " + 
         humanScore + " Computer Score: " + computerScore );
     } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
         ++humanScore;
         console.log ("Computer chose " + computerChoice);
         console.log ("You win! Scissors beats paper!");
-        console.log (" Your score: " + 
+        console.log ("Your score: " + 
         humanScore + " Computer Score: " + computerScore );
     } else if (humanChoice === 'rock' && computerChoice === 'paper') {
         ++computerScore;
         console.log ("Computer chose " + computerChoice);
         console.log ("You lose! Paper beats rock!");
-        console.log (" Your score: " + 
+        console.log ("Your score: " + 
         humanScore + " Computer Score: " + computerScore );
     } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
         ++computerScore;
         console.log ("Computer chose " + computerChoice);
         console.log ("You lose! Scissors beats paper!");
-        console.log (" Your score: " + 
+        console.log ("Your score: " + 
         humanScore + " Computer Score: " + computerScore );
     } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
         ++computerScore;
         console.log ("Computer chose " + computerChoice);
         console.log ("You lose! Rock beats scissors!");
-        console.log (" Your score: " + 
+        console.log ("Your score: " + 
         humanScore + " Computer Score: " + computerScore );
     } else { 
         console.log ("Computer chose " + computerChoice + 
