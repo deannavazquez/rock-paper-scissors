@@ -1,21 +1,5 @@
 
 
-
-
-/* function getHumanChoice() {
-    let input = prompt("Enter Rock, Paper, or Scissors").toLowerCase().trim();
-    if (!input) {
-        alert("Invalid choice, please try again.");
-        return getHumanChoice(); // Ask again for valid input
-    }
-    if (['rock', 'paper', 'scissors'].includes(input)) {
-        return input;
-    } else {
-        alert("Invalid choice, please try again.");
-        return getHumanChoice(); // Ask again for valid input
-    }
-} */
-
 let humanScore = 0;
 let computerScore = 0;
 
@@ -73,10 +57,11 @@ function playRound(humanChoice, computerChoice) {
         console.log ("Your score: " + 
         humanScore + " Computer Score: " + computerScore );
     } else { 
-        console.log ("Computer chose " + computerChoice + 
-        ". Tie. Your score: " + 
-        humanScore + " Computer Score: " + computerScore);}
-}
+        console.log ("Computer chose " + computerChoice);
+        console.log ("Tie.");
+        console.log ("Your score: " + humanScore +  
+            " Computer Score: " + computerScore);
+} }
 
 
 
@@ -105,7 +90,3 @@ function playRound(humanChoice, computerChoice) {
 
   /*   playGame(); */
  
-
-
-    /* button.addEventListener("click", () => {
-        alert(button.id); */
