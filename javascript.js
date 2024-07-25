@@ -19,65 +19,47 @@ function getComputerChoice () {
     return choices[Math.floor(Math.random()*choices.length)];
 }
 
+ let results = document.querySelector(".results");
+
+
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === 'rock' && computerChoice === 'scissors') { 
         ++humanScore;
-        console.log ("Computer chose " + computerChoice);
-        console.log ("You win! Rock beats scissors!");
-        console.log ("Your score: " + 
-        humanScore + " Computer Score: " + computerScore );
+        results.innerHTML = "Computer chose " + computerChoice + "<br>Rock beats scissors! You win 🎉<br>Your score: " + humanScore + "<br>Computer Score: " + computerScore;
     } else if  (humanChoice === 'paper' && computerChoice === 'rock') {
         ++humanScore;
-        console.log ("Computer chose " + computerChoice);
-        console.log ("You win! Paper beats rock!");
-        console.log ("Your score: " + 
-        humanScore + " Computer Score: " + computerScore );
+        results.innerHTML = "Computer chose " + computerChoice + "<br>Paper beats rock! You win 🎉<br>Your score: " + humanScore + "<br>Computer Score: " + computerScore ;
     } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
         ++humanScore;
-        console.log ("Computer chose " + computerChoice);
-        console.log ("You win! Scissors beats paper!");
-        console.log ("Your score: " + 
-        humanScore + " Computer Score: " + computerScore );
+        results.innerHTML = "Computer chose " + computerChoice  + "<br>Scissors beats paper! You win 🎉<br>Your score: " + humanScore + "<br>Computer Score: " + computerScore ;
     } else if (humanChoice === 'rock' && computerChoice === 'paper') {
         ++computerScore;
-        console.log ("Computer chose " + computerChoice);
-        console.log ("You lose! Paper beats rock!");
-        console.log ("Your score: " + 
-        humanScore + " Computer Score: " + computerScore );
+        results.innerHTML = "Computer chose " + computerChoice + "<br>Paper beats rock! You lose 😭<br>Your score: " + humanScore + "<br>Computer Score: " + computerScore ;
     } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
         ++computerScore;
-        console.log ("Computer chose " + computerChoice);
-        console.log ("You lose! Scissors beats paper!");
-        console.log ("Your score: " + 
-        humanScore + " Computer Score: " + computerScore );
+        results.innerHTML = "Computer chose " + computerChoice + "<br>Scissors beats paper! You lose 😭<br>Your score: " + humanScore + "<br>Computer Score: " + computerScore ;
     } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
         ++computerScore;
-        console.log ("Computer chose " + computerChoice);
-        console.log ("You lose! Rock beats scissors!");
-        console.log ("Your score: " + 
-        humanScore + " Computer Score: " + computerScore );
+        results.innerHTML = "Computer chose " + computerChoice + "<br>Rock beats scissors! You lose 😭<br>Your score: " + humanScore + "<br>Computer Score: " + computerScore ;
     } else { 
-        console.log ("Computer chose " + computerChoice);
-        console.log ("Tie.");
-        console.log ("Your score: " + humanScore +  
-            " Computer Score: " + computerScore);
+        results.innerHTML = "You both chose " + computerChoice + " 😲<br>Tie.<br>Your score: " + humanScore +  "<br>Computer Score: " + computerScore ;
 } }
 
 
 
 
-/* function playGame(){ */
-   /* for (let i = 0; i < 5; i++) */ /* { */
- /*    const humanSelection = getHumanChoice();
+/* function playGame(){
+   for (let i = 0; i < 5; i++) { 
+   const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
 
 
-    playRound(humanSelection, computerSelection); */
+    playRound(humanSelection, computerSelection);
     
 
 
-    /* if (i === 4) {  *///this makes sure that the below does not trigger on every round but only at the end
-       /*  if (humanScore > computerScore) {
+    if (i === 4) {  //this makes sure that the below does not trigger on every round but only at the end
+       if (humanScore > computerScore) {
             alert ("You win the game!");
         } else if (humanScore < computerScore) {
             alert ("You lose! Computer wins the game!");
@@ -85,8 +67,8 @@ function playRound(humanChoice, computerChoice) {
             alert ("It's a tie!");
         }
      }
-    } */
-/* } */
+    } 
+ }  */
 
   /*   playGame(); */
  
