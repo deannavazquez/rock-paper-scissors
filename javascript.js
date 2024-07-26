@@ -4,12 +4,17 @@ let humanScore = 0;
 let computerScore = 0;
 
 const buttons = document.querySelectorAll("button");
+const canvas = document.querySelector("#confetti");
+
 
 buttons.forEach(button => {
     button.addEventListener("click", function() {
+        if (humanScore < 5 && computerScore <5) {
         const humanChoice = this.getAttribute("class");
         const computerChoice = getComputerChoice();
         playRound(humanChoice, computerChoice);
+        checkWinner();  
+        }
     });
 });
 
@@ -46,29 +51,25 @@ function playRound(humanChoice, computerChoice) {
 } }
 
 
+function checkWinner() {
+    if (humanScore === 5) {
+        results.innerHTML += "<br>You win the game!";
+        disableButtons();
+        confetti();
+    } else if (computerScore === 5) {
+        results.innerHTML += "<br>Compuer wins the game 😭";
+      disableButtons();
+    }
+}
+
+function disableButtons() {
+  buttons.forEach((button) => {
+    button.disabled = true;
+                  });
+}
 
 
-/* function playGame(){
-   for (let i = 0; i < 5; i++) { 
-   const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-
-
-    playRound(humanSelection, computerSelection);
-    
-
-
-    if (i === 4) {  //this makes sure that the below does not trigger on every round but only at the end
-       if (humanScore > computerScore) {
-            alert ("You win the game!");
-        } else if (humanScore < computerScore) {
-            alert ("You lose! Computer wins the game!");
-        } else {
-            alert ("It's a tie!");
-        }
-     }
-    } 
- }  */
-
-  /*   playGame(); */
- 
+function confetti() {
+    const jsConfetti = new JSConfetti();
+    jsConfetti.addConfetti();
+}
