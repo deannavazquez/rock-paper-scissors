@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    gap: 50px;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 15px;
+
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+button, .results {
+    font-family: monospace;
+}
+
+.rock {
+    padding: 10px 49px;
+}
+
+.paper {
+    padding: 10px 44px;
+}

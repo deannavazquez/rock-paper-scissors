@@ -65,7 +65,8 @@ function checkWinner() {
 function disableButtons() {
   buttons.forEach((button) => {
     button.disabled = true;
-                  });
+                 
+  });
 }
 
 
